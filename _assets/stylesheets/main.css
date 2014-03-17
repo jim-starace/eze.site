@@ -1,0 +1,29 @@
+.jumbotron {
+  height: 99vh;
+  margin: 0;
+  padding: 0;
+}
+.slider-arrow {
+  position: absolute;
+  top:      32%;
+  height:   74px;
+  width:    29px;
+  z-index:  1000;
+  background-repeat: no-repeat;
+}
+.prev-button {
+  left: 5px;
+  background-image: url('/images/prev.png')
+}.next-button {
+  right: 5px;
+  background-image: url('/images/next.png')  
+}
+.cycle-wrap {
+	width:100%;
+	margin: 0 auto;
+}
+.cycle-slideshow .container {
+  height: 99vh;
+  max-width: 100%;
+  padding: 0 42px;
+}

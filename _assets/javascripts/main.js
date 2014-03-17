@@ -1,3 +1,5 @@
+//= require vendor/jquery.cycle2.min.js
+
 // IIFE - Immediately Invoked Function Expression
 (function (yourcode) {
 
@@ -11,10 +13,19 @@
     $(function () {
 
         // The DOM is ready!
-
+		setActivePage();
         
     });
 
     // The rest of the code goes here!
+    
+	$(window).on('hashchange', function() {
+	  setActivePage();
+	});  
+	
+	function setActivePage () {
+		var page = window.location.hash.substr(1);
+	  	$("#" + page +"").addClass('active').siblings().removeClass('active');
+	} 
 
 }));
