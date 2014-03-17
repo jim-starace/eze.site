@@ -10,22 +10,23 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">     
 
-        <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/vendor/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/static/css/vendor/h5bp.css">
+	{% stylesheet vendor/bootstrap.min.css %}
+	{% stylesheet vendor/bootstrap-theme.min.css %}
+	{% stylesheet vendor/h5bp.min.css %}
 
-		<script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		<script src="/static/js/vendor/jquery-1.10.2.min.js"></script>
-		<script src="/static/js/vendor/bootstrap.min.js"></script>
-		<script src="/static/js/main.js"></script>
+	{% javascript vendor/modernizr-2.6.2-respond-1.1.0.min.js %}
+	{% javascript vendor/jquery-1.10.2.min.js %}
+	{% javascript vendor/bootstrap.min.js %}
+	{% javascript main.js %}
+		
     </head>
     <body>
 
-	    {% include header.html %}
-
-	      {{ content }}
-
-	    {% include footer.html %}
+	{% include header.html %}
+	<main id="site-content" role="main">
+	{{ content }}
+	</main>
+	{% include footer.html %}
 
     </body>
 </html>
