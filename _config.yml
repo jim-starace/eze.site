@@ -12,3 +12,4 @@ exclude:          ['Gemfile', 'Gemfile.lock', '.gitignore', '.ruby-version', 'Ra
 assets:
   js_compressor:  uglifier
   css_compressor: sass
+  baseurl: assets/
