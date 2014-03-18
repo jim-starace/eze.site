@@ -6,7 +6,7 @@ url:              http://localhost:4000
 markdown:         redcarpet
 pygments:         true
 regeneration:     -w 
-exclude:          ['Gemfile', 'Gemfile.lock', '.ruby-version']
+exclude:          ['Gemfile', 'Gemfile.lock', '.gitignore', '.ruby-version', 'Rakefile', 'README.md', '.DS_Store']
 
 #Asset Pipline
 assets:
