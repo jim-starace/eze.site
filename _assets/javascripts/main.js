@@ -25,7 +25,7 @@
 	
 	function setActivePage () {
 		var page = window.location.hash.substr(1);
-	  	$("#" + page +"").addClass('active').siblings().removeClass('active');
+	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
 	} 
 
 }));
