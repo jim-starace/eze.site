@@ -3,59 +3,33 @@ layout: default
 title: Your New Jekyll H5BP Site
 ---
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-<div class="cycle-wrap">
-<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev=".prev-button" data-cycle-next=".next-button" data-cycle-slides="div">
-  <div class="container" data-cycle-hash="ezextends" style="background:#61b5b5">
-    <h1>Hello, Home</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div>
-  <div class="container" data-cycle-hash="the-lowdown" style="background:#feba75">
-    <h1>Hello, Page 1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div>
-  <div class="container" data-cycle-hash="chute-gallery" style="background:#ca7274">
-    <h1>Hello, Page 2</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div>  
-  <div class="container" data-cycle-hash="lets-get-going" style="background:#61a8c4">
-    <h1>Hello, Page 3</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div>
-  <div class="container" data-cycle-hash="the-company" style="background:#61a8c4">
-    <h1>Hello, Page 4</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div>  
-  <div class="container" data-cycle-hash="contact" style="background:#755f85">
-    <h1>Hello, Contact</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum, metus non porta ultrices, nisi ipsum aliquet elit, sit amet laoreet odio metus id magna.</p>
-  </div> 
-</div>   
-</div>      
+
+<div class="content">
+	<div class="cycle-wrap">
+		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev=".prev-button" data-cycle-next=".next-button" data-cycle-slides="div">
+		  <div class="container" data-cycle-hash="ezextends">
+			{% include ezextends.html %}
+		  </div>
+		  <div class="container" data-cycle-hash="the-lowdown" style="background:#feba75">
+		    {% include lowdown.html %}
+		  </div>
+		  <div class="container" data-cycle-hash="chute-gallery" style="background:#ca7274">
+		    {% include gallery.html %}
+		  </div>  
+		  <div class="container" data-cycle-hash="lets-get-going" style="background:#61a8c4">
+		    {% include going.html %}
+		  <div class="container" data-cycle-hash="the-company" style="background:#61a8c4">
+		    {% include company.html %}
+		  </div>  
+		  <div class="container" data-cycle-hash="contact" style="background:#755f85">
+		    {% include contact.html %}
+		  </div> 
+		</div>
+<!--
+		<div class="controls">
+			<a href="#" class="prev-button slider-arrow ir" title="Previous">Previous</a>
+			<a href="#" class="next-button slider-arrow ir" title="Next">Next</a>
+		</div>
+-->		   
+	</div>     
 </div>
-<div class="controls">
-	<a href="#" class="prev-button slider-arrow ir" title="Previous">Previous</a>
-	<a href="#" class="next-button slider-arrow ir" title="Next">Next</a>
-</div>
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-    </div>
-    <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-   </div>
-    <div class="col-lg-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-    </div>
-  </div>
-</div> <!-- /container --> 
-<hr>

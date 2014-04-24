@@ -1,3 +1,14 @@
+html, body {
+  margin:			0;
+  padding: 			0;
+  height:			100%;
+}
+#site-content, .content, .cycle-wrap, .cycle-slideshow {
+  height: 			100%;
+  -moz-box-sizing:	border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:		border-box;  
+}
 .navbar-default {
   background: 		#eaeff2;
   margin-bottom: 	0;
@@ -5,6 +16,11 @@
 .navbar-default .navbar-brand {
   height: 			85px;
   padding-top: 		15px;
+}
+@media (min-width: 768px) { 
+  .navbar-default .navbar-brand	{
+    margin-right: 	75px;
+  }
 }
 .navbar-default .navbar-nav {
   margin-top: 		30px;
@@ -42,15 +58,19 @@
   box-shadow: 		none;
   opacity: 			1;  
 }
-
-
-
-
-.jumbotron {
-  height: 99vh;
-  margin: 0;
-  padding: 0;
+.cycle-slideshow .container {
+  min-height:		100%;
+  min-width:		100%;
 }
+
+[data-cycle-hash="ezextends"]{ 
+  background: url(../images/ezextends-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .slider-arrow {
   position: absolute;
   top:      32%;
@@ -65,13 +85,4 @@
 }.next-button {
   right: 5px;
   background-image: url('../images/next.png')  
-}
-.cycle-wrap {
-	width:100%;
-	margin: 0 auto;
-}
-.cycle-slideshow .container {
-  height: 99vh;
-  min-width: 100%;
-  padding: 0 42px;
 }
