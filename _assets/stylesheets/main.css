@@ -18,8 +18,9 @@ html, body {
   padding-top: 		15px;
 }
 @media (min-width: 768px) { 
-  .navbar-default .navbar-brand	{
+  .navbar>.container-fluid .navbar-brand{
     margin-right: 	75px;
+    margin-left:	45px;
   }
 }
 .navbar-default .navbar-nav {
@@ -70,7 +71,28 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
+section#intro {
+  background-color: #e4eaee;
+  max-width:		570px;
+  padding:			0 18px 20px;
+}
+@media (min-width: 768px) { 
+  section#intro {
+  margin-top: 60px;
+  margin-left: 45px;
+  }
+}
+section#intro h1 {
+  color: #f05133;
+  font-size: 90px;
+  margin-bottom: 0;
 
+}
+section#intro p {
+  font-size: 15px;
+  color: #373d41;
+  margin-left: 5px;
+}
 .slider-arrow {
   position: absolute;
   top:      32%;
