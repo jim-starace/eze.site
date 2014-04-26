@@ -3,6 +3,12 @@ html, body {
   padding: 			0;
   height:			100%;
 }
+@media (max-width: 992px) {
+    body{font-size: 12px;}
+}
+@media (max-width: 768px) {
+    body{font-size: 10px;}
+}
 #site-content, .content, .cycle-wrap, .cycle-slideshow {
   height: 			100%;
   -moz-box-sizing:	border-box;
@@ -77,19 +83,25 @@ section#intro {
   padding:			0 18px 20px;
 }
 @media (min-width: 768px) { 
-  section#intro {
+  .ezextends {
   margin-top: 60px;
   margin-left: 45px;
   }
 }
+
 section#intro h1 {
   color: #f05133;
-  font-size: 90px;
+  font-size: 6.5em;
   margin-bottom: 0;
 
 }
+@media (max-width: 768px) {
+  section#intro h1 {
+    font-size: 4.38em
+  }
+}
 section#intro p {
-  font-size: 15px;
+  font-size: 1.07em;
   color: #373d41;
   margin-left: 5px;
 }
@@ -107,4 +119,33 @@ section#intro p {
 }.next-button {
   right: 5px;
   background-image: url('../images/next.png')  
+}
+@media (max-width: 1130px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-collapse.collapse.in { 
+        display: block!important; 
+    }
 }
