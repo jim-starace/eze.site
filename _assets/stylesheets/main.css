@@ -79,8 +79,7 @@ html, body {
 }
 section#intro {
   background-color: #e4eaee;
-  max-width:		570px;
-  padding:			0 18px 20px;
+  padding:			14px 18px 18px;
 }
 @media (min-width: 768px) { 
   .ezextends {
@@ -88,11 +87,26 @@ section#intro {
   margin-left: 45px;
   }
 }
-
+@media (max-width: 768px) { 
+  .ezextends {
+  margin-top: 15px;
+  }
+}
+.ezextends {
+  max-width: 570px;
+}
+.video-wrap {
+  width: 35%;
+}
+.stripes-wrap {
+  width: 65%;
+}
 section#intro h1 {
   color: #f05133;
   font-size: 6.5em;
-  margin-bottom: 0;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
 
 }
 @media (max-width: 768px) {
@@ -104,6 +118,7 @@ section#intro p {
   font-size: 1.07em;
   color: #373d41;
   margin-left: 5px;
+  margin-bottom: 0;
 }
 .slider-arrow {
   position: absolute;
@@ -120,7 +135,7 @@ section#intro p {
   right: 5px;
   background-image: url('../images/next.png')  
 }
-@media (max-width: 1130px) {
+@media (max-width: 1136px) {
     .navbar-header {
         float: none;
     }
