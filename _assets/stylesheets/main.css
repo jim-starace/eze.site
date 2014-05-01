@@ -74,7 +74,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 200;
-  background-image: url(../../images/side-stripes-left.png);
+  background-image: url(../images/side-stripes-left.png);
   background-repeat: repeat-y;
   min-height: 100%;
   width: 17px;
@@ -84,7 +84,7 @@ html, body {
   top: 0;
   right: 0;
   z-index: 200;
-  background-image: url(../../images/side-stripes-right.png);
+  background-image: url(../images/side-stripes-right.png);
   background-repeat: repeat-y;
   min-height: 100%;
   width: 17px;
