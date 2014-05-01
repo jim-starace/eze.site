@@ -69,7 +69,31 @@ html, body {
   min-height:		100%;
   min-width:		100%;
 }
-
+.side-stripe-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-image: url(../../images/side-stripes-left.png);
+  background-repeat: repeat-y;
+  min-height: 100%;
+  width: 17px;
+}
+.side-stripe-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  background-image: url(../../images/side-stripes-right.png);
+  background-repeat: repeat-y;
+  min-height: 100%;
+  width: 17px;
+}
+@media (max-width: 768px) { 
+  .side-stripe-left, .side-stripe-right {
+    display: none;
+  }
+}
 [data-cycle-hash="ezextends"]{ 
   background: url(../images/ezextends-bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;

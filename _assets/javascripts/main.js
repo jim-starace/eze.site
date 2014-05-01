@@ -26,6 +26,11 @@
 	function setActivePage () {
 		var page = window.location.hash.substr(1);
 	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
+	  	if (page != 'ezextends' && page != '' ) {
+	  		$('.side-stripe-left').removeClass('hidden');
+	  	} else {
+	  		$('.side-stripe-left').addClass('hidden');
+	  	}
 	} 
 
 }));
