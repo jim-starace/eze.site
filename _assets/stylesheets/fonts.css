@@ -25,6 +25,6 @@
 .nav li a, .content {
 	font-family: 'ralewayregular','Helvetica Neue', Helvetica, Arial, sans-serif;	
 }
-.content h1 {
+.content .ezextends h1 {
 	font-family: 'ralewayextrabold','Helvetica Neue', Helvetica, Arial, sans-serif;
 }

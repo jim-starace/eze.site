@@ -94,6 +94,7 @@ html, body {
     display: none;
   }
 }
+/*
 [data-cycle-hash="ezextends"]{ 
   background: url(../images/ezextends-bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -101,23 +102,51 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
+*/
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
 section#intro {
   background-color: #e4eaee;
   padding:			14px 18px 18px;
 }
 @media (min-width: 768px) { 
-  .ezextends {
+  .ezextends, .lowdown {
   margin-top: 60px;
   margin-left: 45px;
   }
 }
 @media (max-width: 768px) { 
-  .ezextends {
+  .ezextends, .lowdown {
   margin-top: 15px;
   }
 }
 .ezextends {
   max-width: 570px;
+}
+.lowdown {
+  max-width: 310px;
 }
 .video-wrap {
   width: 35%;
@@ -131,6 +160,20 @@ section#intro h1 {
   line-height: 1em;
   margin: 0;
   padding: 0;
+}
+section#easy {
+  border: 1px solid	#ffffff;
+  background-color: #FB3425;
+}
+section#easy h1 {
+  width: 6.3em;;
+  color: #e9eef1;
+  font-size: 2.25em;
+  line-height: 1.75em;
+  margin: 0;
+  padding: 0;
+  border-bottom: 20px solid #E9EDF0;
+  margin-left: 15px;
 
 }
 @media (max-width: 768px) {
@@ -143,6 +186,12 @@ section#intro p {
   color: #373d41;
   margin-left: 5px;
   margin-bottom: 0;
+}
+section#easy p {
+  font-size: 1.07em;
+  line-height: 1.07em;
+  color: #e9eef1;
+  margin: 10px 15px 15px;
 }
 .slider-arrow {
   position: absolute;
