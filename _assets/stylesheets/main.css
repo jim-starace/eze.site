@@ -107,7 +107,7 @@ html, body {
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1024px;
+  min-width: 750px;
 	
   /* Set up proportionate scaling */
   width: 100%;
@@ -129,12 +129,13 @@ img.bg {
 
 section#intro {
   background-color: #e4eaee;
+  opacity:          0.7;
   padding:			14px 18px 18px;
 }
 @media (min-width: 768px) { 
   .ezextends, .lowdown {
-  margin-top: 60px;
-  margin-left: 45px;
+  margin-top: 75px;
+  margin-right: 60px;
   }
 }
 @media (max-width: 768px) { 
@@ -148,12 +149,6 @@ section#intro {
 .lowdown {
   max-width: 310px;
 }
-.video-wrap {
-  width: 35%;
-}
-.stripes-wrap {
-  width: 65%;
-}
 section#intro h1 {
   color: #f05133;
   font-size: 6.5em;
@@ -163,7 +158,6 @@ section#intro h1 {
 }
 section#easy {
   border: 1px solid	#ffffff;
-  background-color: #FB3425;
 }
 section#easy h1 {
   width: 6.3em;;
