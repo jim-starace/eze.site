@@ -3,17 +3,23 @@ html, body {
   padding: 			0;
   height:			100%;
 }
+#site-content {
+  height: 			calc(100% - 85px);
+  -moz-box-sizing:	border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:		border-box; 
+}
+.content, .cycle-wrap, .cycle-slideshow {
+  height: 			100%;
+  -moz-box-sizing:	border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:		border-box;  
+}
 @media (max-width: 992px) {
     body{font-size: 12px;}
 }
 @media (max-width: 768px) {
     body{font-size: 10px;}
-}
-#site-content, .content, .cycle-wrap, .cycle-slideshow {
-  height: 			100%;
-  -moz-box-sizing:	border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:		border-box;  
 }
 .navbar-default {
   background: 		#eaeff2;
@@ -94,48 +100,36 @@ html, body {
     display: none;
   }
 }
-/*
 [data-cycle-hash="ezextends"]{ 
-  background: url(../images/ezextends-bg.jpg) no-repeat center center fixed; 
+  background: url(../images/ezextends-bg.jpg) no-repeat left top 85px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-*/
-
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 750px;
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+[data-cycle-hash="the-lowdown"]{ 
+  background: url(../images/lowdown-bg.jpg) no-repeat left top 85px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
-
-section#intro {
-  background-color: #e4eaee;
-  opacity:          0.7;
-  padding:			14px 18px 18px;
-}
 @media (min-width: 768px) { 
   .ezextends, .lowdown {
   margin-top: 75px;
   margin-right: 60px;
+  }
+}
+@media (min-width: 768px) { 
+  .lowdown {
+  margin-top: 75px;
+  margin-left: 45px;
+  }
+}
+@media (max-width: 1136px) {
+  .lowdown {
+    margin-top: 30px;
   }
 }
 @media (max-width: 768px) { 
@@ -148,6 +142,10 @@ section#intro {
 }
 .lowdown {
   max-width: 310px;
+}
+section#intro {
+  background-color: rgba(228, 234, 238, 0.5);
+  padding:			14px 18px 18px;
 }
 section#intro h1 {
   color: #f05133;
