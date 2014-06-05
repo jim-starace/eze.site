@@ -108,40 +108,28 @@ html, body {
   background-size: cover;
 }
 [data-cycle-hash="the-lowdown"]{ 
-  background: url(../images/lowdown-bg.jpg) no-repeat left top 85px fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(../images/lowdown.svg) #EF5033 no-repeat left top 85px fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
-
+[data-cycle-hash="lets-get-going"] {
+  background-color: #d7dee2;
+}
 @media (min-width: 768px) { 
-  .ezextends, .lowdown {
+  .ezextends {
   margin-top: 75px;
   margin-right: 60px;
   }
 }
-@media (min-width: 768px) { 
-  .lowdown {
-  margin-top: 75px;
-  margin-left: 45px;
-  }
-}
-@media (max-width: 1136px) {
-  .lowdown {
-    margin-top: 30px;
-  }
-}
 @media (max-width: 768px) { 
-  .ezextends, .lowdown {
+  .ezextends {
   margin-top: 15px;
   }
 }
 .ezextends {
   max-width: 570px;
-}
-.lowdown {
-  max-width: 310px;
 }
 section#intro {
   background-color: rgba(228, 234, 238, 0.5);
