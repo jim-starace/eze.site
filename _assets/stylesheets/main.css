@@ -9,7 +9,7 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing:		border-box; 
 }
-.content, .cycle-wrap, .cycle-slideshow {
+.content, .cycle-wrap, .cycle-slideshow, [data-cycle-hash="lets-get-going"] {
   height: 			100%;
   -moz-box-sizing:	border-box;
   -webkit-box-sizing: border-box;
@@ -115,7 +115,69 @@ html, body {
   background-size: contain;
 }
 [data-cycle-hash="lets-get-going"] {
-  background-color: #d7dee2;
+  background-color: #C6CED3;
+}
+/*
+[data-cycle-hash="lets-get-going"]:after {
+	background-color: #757E83;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5.35em;
+    left: 5.35em;
+    right: 5.35em;
+    bottom: 5.35em;
+    z-index: -1;
+
+}
+
+.going {
+  background-color: #757E83;
+  padding: 75px;
+  margin: 75px;
+
+}
+.going img {
+	width: 100%;
+}
+*/
+.going-wrapper {
+	background-color: #757E83;
+	height: calc(100% - 150px);
+	margin: 70px 60px;
+	padding: 0px;
+}
+.going-outer {
+	position: relative;
+	margin: auto;
+	max-width: 1024px;
+	height: 100%;
+	background: url(../images/get-going-bg.jpg) no-repeat center;
+
+}
+.going-inner {
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding:75px 90px;
+}
+.going-inner section {
+	background-color: #e9edf0;
+	max-width: 400px;
+	height: 200px;
+	padding: 5px 25px;
+}
+.going-inner section h2 {
+	font-size: 1.42em;
+	line-height: 1.8em;
+	border-bottom: 20px solid #ee5033;
+	width:200px;
+	text-transform: uppercase;
+}
+.going-inner section p {
+	font-size: .92em;
 }
 @media (min-width: 768px) { 
   .ezextends {
@@ -138,7 +200,7 @@ section#intro {
 section#intro h1 {
   color: #f05133;
   font-size: 6.5em;
-  line-height: 1em;
+  line-height: 1.8em;
   margin: 0;
   padding: 0;
 }
