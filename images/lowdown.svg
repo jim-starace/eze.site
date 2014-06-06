@@ -1,4 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1252 723" enable-background="new 0 0 1252 723" xml:space="preserve">
+  <style>
+    /* <![CDATA[ */
+	@font-face {
+	    font-family: 'NBTypewriterPro-Fett';
+	    src: url('../fonts/nb_typewriter_pro-75-webfont.eot');
+	    src: url('../fonts/nb_typewriter_pro-75-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/nb_typewriter_pro-75-webfont.woff') format('woff'),
+	         url('../fonts/nb_typewriter_pro-75-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+    /* ]]> */
+  </style>
 <rect x="83.1" y="33.1" fill="none" stroke="#E9EEF1" stroke-width="0.75" stroke-miterlimit="10" width="310" height="181.3"/>
 <g>
 	<text transform="matrix(1 0 0 1 90.6758 70.5269)" fill="#E9EEF1" font-family="'Raleway'" font-size="33">Easy-Does-It</text>
