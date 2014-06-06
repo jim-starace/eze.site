@@ -121,11 +121,17 @@ html, body {
   -o-background-size: contain;
   background-size: contain;
 }
-[data-cycle-hash="lets-get-going"], [data-cycle-hash="the-company"] {
+[data-cycle-hash="lets-get-going"]{ 
+  background: url(../images/get-going-bg.jpg) no-repeat left top 85px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+[data-cycle-hash="the-company"] {
   background-color: #C6CED3;
 }
 .going-wrapper, .company {
-	background-color: #757E83;
 	height: calc(100% - 150px);
 	margin: 70px 55px;
 	padding: 0px;
@@ -194,7 +200,6 @@ section#easy p {
 	margin: auto;
 	max-width: 1024px;
 	height: 100%;
-	background: url(../images/get-going-bg.jpg) no-repeat center;
 
 }
 .going-inner {
