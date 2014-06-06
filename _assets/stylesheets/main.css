@@ -115,7 +115,7 @@ html, body {
   background-size: cover;
 }
 [data-cycle-hash="the-lowdown"]{ 
-  background: url(../images/lowdown.svg) #EF5033 no-repeat left top 85px fixed;
+  background: url(../images/lowdown-bg.svg) #EF5033 no-repeat left top 85px fixed;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -202,6 +202,7 @@ section#easy p {
 	height: 100%;
 
 }
+
 .going-inner {
   height: 50%;
 
