@@ -15,6 +15,13 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing:		border-box;  
 }
+.col-height {
+  height: 			100%;
+  overflow: hidden;
+  -moz-box-sizing:	border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:		border-box; 
+}
 @media (max-width: 992px) {
     body{font-size: 12px;}
 }
@@ -226,6 +233,9 @@ section#easy p {
 	width: 37%;
 	float: left
 }
+.company section {
+	padding: 5px 35px 35px;
+}
 .company h2 {
 	margin: 0;
 	font-size: 1.42em;
@@ -240,8 +250,21 @@ section#easy p {
 	padding-top: .77em;
 	color: #e9eef1;
 }
+.company .rimage {
+	width: 100%;
+}
+figure.rimage img {
+	min-width: 100%;
+}
+.column-2 figure img {
+	min-height: 40%;
+}
+.column-3 figure img {
+	min-height: 41.5%;
+}
 .msm {
 	background-color: #373c41;
+	min-height: 40%;
 }
 .msm h2 {
 	border-bottom: 20px solid #ee5033;
@@ -249,6 +272,7 @@ section#easy p {
 }
 .chutes {
 	background-color: #e9edf0;
+	min-height: 40%;
 }
 .chutes h2 {
 	color: #373d41;
@@ -260,6 +284,7 @@ section#easy p {
 }
 .stuff {
 	background-color: #757d83;
+	min-height: 63%;
 }
 .stuff h2 {
 	border-bottom: 20px solid #e9edf0;
@@ -274,14 +299,16 @@ section#easy p {
 }
 .lock {
 	background-color: #373c41;
+	padding-left: 128px!important;
+	min-height: 41.5%;
 }
 .lock h2 {
 	border-bottom: 20px solid #ee5033;
 	width: 10.6em;
-	margin-left: 4.68em;
 }
 .concrete {
 	background-color: #9ba3aa;
+	min-height: 46%;
 }
 .concrete h2 {
 	border-bottom: 20px solid #e9edf0;
