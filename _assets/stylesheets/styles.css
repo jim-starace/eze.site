@@ -1,0 +1,146 @@
+/* DOCUMENT INFORMATION
+	- Document: EZE Main Stylesheet
+	- Version:  1
+	- Author:   J. Starace
+*/
+/* DOCUMENT INFORMATION
+	- Document: EZE Main Stylesheet
+	- Version:  1
+	- Author:   J. Starace
+*/
+.box-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.nav-a-transition {
+  -webkit-transition: background 0.1s linear,opacity 0.1s linear;
+  -moz-transition: background 0.1s linear,opacity 0.1s linear;
+  -ms-transition: background 0.1s linear,opacity 0.1s linear;
+  -o-transition: background 0.1s linear,opacity 0.1s linear;
+  transition: background 0.1s linear,opacity 0.1s linear;
+}
+.nav-active {
+  color: #e9eef1;
+  background-color: #ef5033;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.navbar-default {
+  background-color: #e9eef1;
+  border-color: #c6ced3;
+  margin-bottom: 0;
+}
+.navbar-default .container-fluid .navbar-brand {
+  height: 85px;
+  padding-top: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-default .container-fluid .navbar-brand {
+    margin-left: 45px;
+    margin-right: 75px;
+  }
+}
+.navbar-default .navbar-nav {
+  margin-top: 30px;
+}
+.navbar-default .navbar-nav li > a {
+  -webkit-font-smoothing: antialiased;
+  padding: 3px 12px;
+  color: #ef5033;
+  text-transform: uppercase;
+  text-shadow: none;
+  background: none;
+  opacity: .9;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background 0.1s linear,opacity 0.1s linear;
+  -moz-transition: background 0.1s linear,opacity 0.1s linear;
+  -ms-transition: background 0.1s linear,opacity 0.1s linear;
+  -o-transition: background 0.1s linear,opacity 0.1s linear;
+  transition: background 0.1s linear,opacity 0.1s linear;
+}
+.navbar-default .navbar-nav li > a:hover,
+.navbar-default .navbar-nav li > a:focus {
+  color: #e9eef1;
+  background-color: #ef5033;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-default .navbar-nav li.active > a {
+  color: #e9eef1;
+  background-color: #ef5033;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-default .navbar-nav li.active > a:hover,
+.navbar-default .navbar-nav li.active > a:focus {
+  color: #e9eef1;
+  background-color: #ef5033;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+/* Hack bootstrap to collapse nav at ealier break point */
+@media (max-width: 1136px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav li {
+    float: none;
+  }
+  .navbar-nav li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

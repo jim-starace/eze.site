@@ -1,0 +1,155 @@
+/* DOCUMENT INFORMATION
+	- Document: EZE Main Stylesheet
+	- Version:  1
+	- Author:   J. Starace
+*/
+
+// Vars
+
+// Breakpoints
+@nav-collapse:		1136px;
+
+// Global Colors
+@brand-red: 		#EF5033;
+@brand-black: 		#373D41;
+@brand-white:		#E9EEF1;
+@brand-grey:		#C6CED3;
+@brand-grey-dark:	#757E83;
+@brand-grey-medium:	#9BA4AA;
+
+// Nav
+@nav:				@brand-white;
+@nav-text: 			@brand-red;
+@nav-active-text:	@brand-white;
+@nav-active-item:	@brand-red;
+@nav-ht:			85px;
+
+// Pages
+
+
+// Mixins
+
+.box-shadow {
+  -webkit-box-shadow:	none;
+     -moz-box-shadow:	none;
+      -ms-box-shadow:	none;
+       -o-box-shadow:	none;           
+          box-shadow:	none;
+}
+.box-sizing {
+  -webkit-box-sizing:   border-box;
+     -moz-box-sizing:	border-box;
+  	  -ms-box-sizing:	border-box;
+       -o-box-sizing:	border-box;    
+          box-sizing:	border-box; 
+}
+.background-size (@size){
+  -webkit-background-size:	@size;
+  	 -moz-background-size:	@size;
+  	  -ms-background-size:	@size;
+       -o-background-size:	@size;
+          background-size:	@size;
+}
+.nav-a-transition {
+  -webkit-transition:	background 0.1s linear,opacity 0.1s linear;
+     -moz-transition:	background 0.1s linear,opacity 0.1s linear;
+      -ms-transition:	background 0.1s linear,opacity 0.1s linear;
+       -o-transition:	background 0.1s linear,opacity 0.1s linear;
+          transition:	background 0.1s linear,opacity 0.1s linear;
+}
+.nav-active {
+  color: 				@nav-active-text;
+  background-color: 	@nav-active-item;
+  opacity: 				1;				
+  .box-shadow;
+}
+
+
+// Styles
+
+html, body {
+  margin:			0;
+  padding: 			0;
+  height:			100%;
+}
+
+// Navbar
+
+.navbar-default {
+  background-color: @nav;
+  border-color:		@brand-grey;
+  margin-bottom: 	0;
+	
+	.container-fluid .navbar-brand {
+  		height: 		@nav-ht;
+  		padding-top:	15px;
+  		
+  		@media only screen and (min-width : 768px) {
+    		margin-left:	45px;
+    		margin-right: 	75px;
+    	}
+	}
+
+	.navbar-nav {
+	  margin-top: 30px;
+	
+		li>a {
+			-webkit-font-smoothing: antialiased;
+			padding:				3px 12px;
+			color:					@nav-text;
+			text-transform:   		uppercase;
+			text-shadow: 			none;				
+			background: 			none;
+			opacity: 				.9;				  
+			.box-shadow;
+			.nav-a-transition;
+		
+			&:hover, &:focus {
+				.nav-active;
+			}
+		}
+		
+		li.active>a {
+		  .nav-active;
+			
+			&:hover, &:focus {
+				.nav-active;
+			}
+		}		
+	}
+}
+
+/* Hack bootstrap to collapse nav at ealier break point */
+@media (max-width: @nav-collapse) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    	
+    	&.collapse {
+        	display: none!important;
+		
+			&.in { 
+        		display: block!important; 
+    		}
+    	}   
+    }
+	.navbar-nav {
+		float: none!important;
+		margin: 7.5px -15px;
+			
+		li {
+			float: none;
+			
+			a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
