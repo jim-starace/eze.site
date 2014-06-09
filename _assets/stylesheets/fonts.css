@@ -11,6 +11,27 @@
 
 }
 @font-face {
+    font-family: 'Raleway Light';
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-light-webfont.woff') format('woff'),
+         url('../fonts/raleway-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Raleway Semi Bold';
+    src: url('../fonts/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold-webfont.woff') format('woff'),
+         url('../fonts/raleway-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'Raleway Extra Bold';
     src: url('../fonts/raleway-extrabold-webfont.eot');
     src: url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -21,40 +42,17 @@
     font-style: normal;
 
 }
-@font-face {
-    font-family: 'Raleway Light';
-    src: url('../fonts/raleway-light-webfont.eot');
-    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-light-webfont.woff') format('woff'),
-         url('../fonts/raleway-light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'NBTypewriterPro-Fett';
-    src: url('../fonts/nb_typewriter_pro-75-webfont.eot');
-    src: url('../fonts/nb_typewriter_pro-75-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/nb_typewriter_pro-75-webfont.woff') format('woff'),
-         url('../fonts/nb_typewriter_pro-75-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-
 
 .nav li a, .content {
 	font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif;	
 }
-.content .ezextends h1 {
+.ezextends h2 {
 	font-family: 'Raleway Extra Bold','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.company p, .going-inner {
+.going h2 {
+	font-family: 'Raleway Semi Bold','Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.company p, .going p {
 	font-family: 'Raleway Light','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 

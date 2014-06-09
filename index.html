@@ -4,11 +4,10 @@ title: Your New Jekyll H5BP Site
 ---
 
 
-<div class="content">
-	<div class="cycle-wrap">
+<div class="content fluid-height">
+	<div class="cycle-wrap fluid-height">
 
-		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev=".prev-button" data-cycle-next=".next-button" data-cycle-slides="div.page">
-		<div class="hidden side-stripe-"></div>			
+		<div class="cycle-slideshow fluid-height" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-prev=".prev-button" data-cycle-next=".next-button" data-cycle-slides="div.page">		
 		  <div class="container page" data-cycle-hash="ezextends">
 			{% include ezextends.html %}
 		  </div>
@@ -18,22 +17,21 @@ title: Your New Jekyll H5BP Site
 		  <div class="container page" data-cycle-hash="chute-gallery" style="background:#ca7274">
 		    {% include gallery.html %}
 		  </div>  
-		  <div class="container page" data-cycle-hash="lets-get-going">
+		  <div class="container page fluid-height" data-cycle-hash="lets-get-going">
 		    {% include going.html %}
 		  </div> 
-		  <div class="container page" data-cycle-hash="the-company">
+		  <div class="container page fluid-height" data-cycle-hash="the-company">
 		    {% include company.html %}
 		  </div>  
 		  <div class="container page" data-cycle-hash="contact" style="background:#755f85">
 		    {% include contact.html %}
-		  </div> 
-		<div class="side-stripe-"></div>		  
+		  </div> 		  
 		</div>
-<!--
+
 		<div class="controls">
-			<a href="#" class="prev-button slider-arrow ir" title="Previous">Previous</a>
-			<a href="#" class="next-button slider-arrow ir" title="Next">Next</a>
+			<a href="#" class="hidden prev-button ir" title="Previous">Previous</a>
+			<a href="#" class="next-button ir" title="Next">Next</a>
 		</div>
--->		   
+	   
 	</div>	     
 </div>

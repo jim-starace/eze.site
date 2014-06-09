@@ -29,14 +29,14 @@
 
 // Mixins
 
-.box-shadow {
+.box-shadow() {
   -webkit-box-shadow:	none;
      -moz-box-shadow:	none;
       -ms-box-shadow:	none;
        -o-box-shadow:	none;           
           box-shadow:	none;
 }
-.box-sizing {
+.box-sizing() {
   -webkit-box-sizing:   border-box;
      -moz-box-sizing:	border-box;
   	  -ms-box-sizing:	border-box;
@@ -50,27 +50,66 @@
        -o-background-size:	@size;
           background-size:	@size;
 }
-.nav-a-transition {
+.nav-a-transition() {
   -webkit-transition:	background 0.1s linear,opacity 0.1s linear;
      -moz-transition:	background 0.1s linear,opacity 0.1s linear;
       -ms-transition:	background 0.1s linear,opacity 0.1s linear;
        -o-transition:	background 0.1s linear,opacity 0.1s linear;
           transition:	background 0.1s linear,opacity 0.1s linear;
 }
-.nav-active {
+.nav-active() {
   color: 				@nav-active-text;
   background-color: 	@nav-active-item;
   opacity: 				1;				
   .box-shadow;
+}
+.button() {
+  position: absolute;
+  top:      50%;
+  height:   48px;
+  width:    55px;
+  z-index:  1000;
+  background-repeat: no-repeat;
+  
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.full-ht-minus-nav() {
+  height:				calc(~"100% - "@nav-ht);
+}
+.vertical-align() {
+  position:				relative;
+  top:					50%;
+  -webkit-transform:	translateY(-50%);
+     -moz-transform:	translateY(-50%);
+      -ms-transform:	translateY(-50%);
+       -o-transform:	translateY(-50%);
+          transform:	translateY(-50%);  
+}
+.company-col {
+  height: 				100%;
+  float:				left;
+  overflow: 			hidden;
+  .box-sizing; 
 }
 
 
 // Styles
 
 html, body {
+  height:			100%;
   margin:			0;
   padding: 			0;
-  height:			100%;
+}
+
+body {
+  @media only screen and (max-width: 992px) {
+  	font-size: 12px;
+  }
+  @media only screen and (max-width: 768px) {
+  	font-size: 10px;
+  }
 }
 
 // Navbar
@@ -152,4 +191,270 @@ html, body {
 			}
 		}
 	}
+}
+
+// Site Buttons
+
+.prev-button {
+  left:					0px;
+  background-image: 	url(../images/prev.png);
+  .button;
+}
+
+.next-button {
+  right: 				0px;
+  background-image: 	url(../images/next.png);
+  .button;   
+}
+
+// Site Content
+
+#site-content {
+  .full-ht-minus-nav;
+  .box-sizing;
+  
+  .fluid-height {
+    height: 	100%;
+    .box-sizing;
+  }
+  
+  .cycle-slideshow .container {		/* Set each page to be full height and width of site-content div */
+    min-height:		100%;
+    min-width:		100%;
+  }
+  
+  /* EZEXTENDS */
+  
+  [data-cycle-hash="ezextends"] {
+    background: url(../images/ezextends-bg.jpg) no-repeat left top 85px fixed;
+    .background-size(cover);
+  }
+    
+  .ezextends {
+    max-width:	570px;
+    float:		right;
+
+	section {
+	  background-color:	rgba(228, 234, 238, 0.5);
+  	  padding:			14px 18px 18px;
+	
+	  h2 {
+		color:			@brand-red;
+		font-size:		6.5em;
+		line-height:	.9em;
+		margin:			0;
+		padding:		0;
+		
+		@media only screen and (max-width: 768px) { 
+		  font-size:	4.38em;
+		} 	
+	  }
+	  
+	  p {
+	    font-size:		1.07em;
+	    color:			#373d41;
+	    margin-left:	5px;
+	    margin-bottom:	0;
+	  }	  
+	}
+	
+	figure {
+      float:	right;
+	}
+
+	
+	@media only screen and (min-width: 768px) {
+	  margin-top:	75px;
+	  margin-right:	60px;	  
+	} 
+	
+	@media (max-width: 768px) {
+	  margin-top:	15px;
+	}
+  }  								/* End EZEXTENDS */
+  
+  
+  /* LOWDOWN */
+  
+  [data-cycle-hash="the-lowdown"]{
+  	background: url(../images/lowdown-bg.svg) #EF5033 no-repeat left top 85px fixed;
+  	.background-size(contain);
+  }
+  
+  /* GALLERY */
+  
+  /* LETS GET GOING */
+
+  [data-cycle-hash="lets-get-going"] {
+    background: url(../images/get-going-bg.jpg) no-repeat left top 85px fixed;
+    .background-size(cover);
+  }
+    
+  .going {
+    height:	calc(~"100% - "(@nav-ht + 100px));
+    
+    >div {
+      max-width:			845px;
+      margin: 				0 auto;
+      .vertical-align;
+	  
+	  section {
+	    background-color:	rgba(228, 234, 238, 0.7);
+		height:				200px;	    
+	    max-width:			400px;
+		padding:			5px 25px;
+	  
+	    h2 {
+	      font-size:		1.42em;
+		  line-height:		1.8em;
+		  margin-top:		10px;
+		  border-bottom:	20px solid @brand-red;
+	    }
+	    
+	    p {
+	      font-size:		.92em;
+	    }
+	  	
+	  	&.install {
+	      float:			left;
+	    }
+	  	
+	  	&.training {
+	      float:			right;
+	    }		    
+	  }  
+    }
+  }  								/* End LETS GET GOING */
+  
+  /* COMPANY */
+
+
+  [data-cycle-hash="the-company"] {
+    background-color: @brand-grey;
+  }  
+  
+  .company {
+    height:				calc(~"100% - "(@nav-ht + 65px));
+	margin:				70px 55px;
+	padding:			0px;
+	
+    section {
+	  padding:			5px 35px 35px;
+	  
+	  h2 {
+		margin:			0;
+		font-size:		1.42em;
+		line-height:	1.8em;
+		padding-top:	.77em;
+		color:			@brand-white;	
+	  }
+	  
+	  p {
+		margin:			0;
+		font-size:		.92em;
+		line-height:	1.2em;
+		padding-top:	.77em;
+		color:			@brand-white;
+	  }	  
+	}
+	
+	figure.fluid-width {
+      width:			100%;
+    
+      img {
+        min-width: 		100%;
+      }
+    }
+
+	    
+    .column-1 {
+	  width:			37%;
+	  .company-col;
+	  
+	  .msm {
+	  	background-color:	@brand-black;
+	  	min-height: 		40%;
+	  	
+	  	h2 {
+		  border-bottom: 	20px solid @brand-red;
+		  width: 			2.51em;	  	
+	  	}
+	  }
+	  
+	  .chutes {
+	  	background-color: 	@brand-white;
+	  	min-height: 		40%;
+	  		
+	  	h2 {
+	  	  color:			@brand-black;
+		  border-bottom: 	20px solid @brand-red;
+		  width: 			7.5em;	  	
+	  	}
+	  	
+	  	p {
+	  	  color: 			@brand-grey-dark;
+	  	}
+	  }	        
+    }
+    
+    .column-2 {
+	  width:		26%;
+	  .company-col;
+	  
+	  .stuff {
+	  	background-color:	@brand-grey-dark;
+	  	min-height: 		63%;
+	  	
+	  	h2 {
+		  border-bottom: 	20px solid @brand-white;
+		  width: 			12.8em;	  	
+	  	}
+	  }
+	  
+	  img {
+	    min-height: 40%;
+	  }
+    }
+    
+    .column-3 {
+	  width:				37%;
+	  .company-col;
+
+	  .security {
+	  	background-color:	@brand-red;
+	  	
+	  	h2 {
+		  border-bottom: 	20px solid @brand-white;
+		  width: 			5em;	  	
+	  	}	  	        
+      }
+	  
+	  .lock {
+	  	background-color:	@brand-black;
+	  	min-height: 		41.5%;
+	  	padding-left: 		128px!important;
+	  	
+	  	h2 {
+		  border-bottom: 	20px solid @brand-red;
+		  width: 			10.6em;	  	
+	  	}
+	  } 
+	  
+	  .concrete {
+	  	background-color:	@brand-grey;
+	  	min-height: 		46%;
+	  	
+	  	h2 {
+		  border-bottom: 	20px solid @brand-white;
+		  width: 			13.5em;	  	
+	  	}
+	  }
+	  
+	  img {
+	    min-height: 41.5%;
+	  }               
+ 	}
+  }
+  
+  
 }

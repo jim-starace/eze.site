@@ -27,9 +27,14 @@
 		var page = window.location.hash.substr(1);
 	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
 	  	if (page != 'ezextends' && page != '' ) {
-	  		$('.side-stripe-left').removeClass('hidden');
+	  		$('.prev-button').removeClass('hidden');
 	  	} else {
-	  		$('.side-stripe-left').addClass('hidden');
+	  		$('.prev-button').addClass('hidden');
+	  	}
+	  	if (page != 'contact' ) {
+	  		$('.next-button').removeClass('hidden');
+	  	} else {
+	  		$('.next-button').addClass('hidden');
 	  	}
 	} 
 
