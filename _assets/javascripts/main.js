@@ -36,6 +36,6 @@
 	  	} else {
 	  		$('.next-button').addClass('hidden');
 	  	}
-	} 
+	}	
 
 }));

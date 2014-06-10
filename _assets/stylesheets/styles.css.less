@@ -158,41 +158,6 @@ body {
 	}
 }
 
-/* Hack bootstrap to collapse nav at ealier break point
-@media (max-width: @nav-collapse) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    	
-    	&.collapse {
-        	display: none!important;
-		
-			&.in { 
-        		display: block!important; 
-    		}
-    	}   
-    }
-	.navbar-nav {
-		float: none!important;
-		margin: 7.5px -15px;
-			
-		li {
-			float: none;
-			
-			a {
-				padding-top: 10px;
-				padding-bottom: 10px;
-			}
-		}
-	}
-}
- */
 // Site Buttons
 
 .prev-button {
@@ -282,6 +247,73 @@ body {
   }
   
   /* GALLERY */
+
+  [data-cycle-hash="chute-gallery"] {
+    //background: url(../images/gallery-bg.jpg) no-repeat left top 85px fixed;
+    //.background-size(cover);
+    padding-left:	0;
+    padding-right:	0;
+  }
+
+
+  .gallery {
+ 
+     >div>div {
+      float:left;
+    }   
+    
+    .row-1>div {
+      height: 21.80%;
+        
+      &.col-1 {
+        width: 40.39%;
+      }
+      &.col-2 {
+        width: 41.56%;
+      }
+      &.col-3 {
+        width: 18.05%;
+      }  
+    }
+    
+    .row-2>div {
+      height: 30.42%;
+      
+      &.col-1 {
+        width: 25.39%;
+      }
+      &.col-2 {
+        width: 25.39%;
+      }
+      &.col-3 {
+        width: 26.33%;
+      } 
+      &.col-4 {
+        width: 22.89%;
+      }       
+    }
+    
+    .row-3>div {
+      height: 47.78%;
+      
+      &.col-1 {
+        width: 18.52%;
+      }
+      &.col-2 {
+        width: 20%;
+      }
+      &.col-3 {
+        width: 20.39%;
+      }
+      &.col-4 {
+        width: 21.02%;
+      } 
+      &.col-5 {
+        width: 20.07%;
+      }              
+    }
+    
+  }
   
   /* LETS GET GOING */
 
@@ -454,6 +486,15 @@ body {
 	    min-height: 41.5%;
 	  }               
  	}
+  }
+  
+  /* CONTACT */
+  
+  [data-cycle-hash="contact"]{
+  	background: url(../images/gallery-bg.jpg) no-repeat left top 85px fixed;
+  	.background-size(cover);
+  	padding-left:0;
+  	padding-right:0;
   }
   
   
