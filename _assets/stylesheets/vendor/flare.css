@@ -371,19 +371,19 @@
     opacity:1
 }
 .peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlPrev {
-    background:url(/images/flare/prev.png) no-repeat 0 0
+    background:url("/images/flare/prev.png") no-repeat 0 0
 }
 .peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlNext {
-    background:url(/images/flare/next.png) no-repeat 0 0
+    background:url("/images/flare/next.png") no-repeat 0 0
 }
 .peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlClose {
-    background:url(/images/flare/close.png) no-repeat 0 0
+    background:url("/images/flare/close.png") no-repeat 0 0
 }
 .peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlThumbs {
-    background:url(/images/flare/thumbs.png) no-repeat 0 0
+    background:url("/images/flare/thumbs.png") no-repeat 0 0
 }
 .peFlareLightbox .peFlareLightboxSpinner span {
-    background:url(/images/flare/spinner.gif) no-repeat center center;
+    background:url("/images/flare/spinner.gif") no-repeat center center;
     background-color:black;
     background-color:rgba(0, 0, 0, .8)
 }
