@@ -39,7 +39,7 @@
 	  	} else {
 	  		$('.next-button').addClass('hidden');
 	  	}
-	  	if (page == 'chute-gallery') {
+	  	if (page == 'chute-gallery' || page == 'the-company') {
 	  		$('#site-content').css('height' , '100%');
 	  	} else {
 	  		$('#site-content').css('height' , '');

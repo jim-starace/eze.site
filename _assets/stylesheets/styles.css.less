@@ -3,11 +3,11 @@
 	- Version:  1
 	- Author:   J. Starace
 */
-/* This was compiled by jekyll, you won! */
+
+@import "/vendor/bootstrap/less/bootstrap.less";
+
 // Vars
 
-// Breakpoints
-@nav-collapse:		1136px;
 
 // Global Colors
 @brand-red: 		#EF5033;
@@ -104,10 +104,10 @@ html, body {
 }
 
 body {
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: @screen-md-min) {
   	font-size: 12px;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: @screen-sm-min) {
   	font-size: 10px;
   }
 }
@@ -371,9 +371,13 @@ body {
   }  
   
   .company {
-    height:				calc(~"100% - "(@nav-ht + 65px));
+    // height:				calc("100% - "(@nav-ht + 65px));
 	margin:				70px 55px;
 	padding:			0px;
+	
+	.img-responsive {
+      width:			100%;
+    } 
 	
     section {
 	  padding:			5px 35px 35px;
@@ -410,7 +414,7 @@ body {
 	  
 	  .msm {
 	  	background-color:	@brand-black;
-	  	min-height: 		40%;
+	  	height: 		40%;
 	  	
 	  	h2 {
 		  border-bottom: 	20px solid @brand-red;
@@ -418,9 +422,13 @@ body {
 	  	}
 	  }
 	  
+	  figure {
+	  	height: 		20%;	    
+	  }
+	  
 	  .chutes {
 	  	background-color: 	@brand-white;
-	  	min-height: 		40%;
+	  	height: 		40%;
 	  		
 	  	h2 {
 	  	  color:			@brand-black;
@@ -431,7 +439,16 @@ body {
 	  	p {
 	  	  color: 			@brand-grey-dark;
 	  	}
-	  }	        
+	  }
+	  
+	  @media only screen and (max-width: @screen-md-min) {
+	     width:50%; 
+	  }
+	  
+	  @media only screen and (max-width: @screen-xs-min) {
+	     width:100%; 
+	  }	  
+	  	        
     }
     
     .column-2 {
@@ -440,25 +457,43 @@ body {
 	  
 	  .stuff {
 	  	background-color:	@brand-grey-dark;
-	  	min-height: 		63%;
+	  	height: 		60%;
 	  	
 	  	h2 {
 		  border-bottom: 	20px solid @brand-white;
-		  width: 			12.8em;	  	
+		  width: 			12.8em;
+		  			  
+		  @media only screen and (max-width: 1320px) {
+		    font-size:		1.2em;			  
+		  }		   	
 	  	}
 	  }
 	  
-	  img {
-	    min-height: 40%;
+	  figure {
+	    height: 40%;
 	  }
+	  
+	  @media only screen and (max-width: @screen-md-min) {
+	     width:50%; 
+	  }
+	  
+	  @media only screen and (max-width: @screen-xs-min) {
+	     width:100%; 
+	  }		  
+	  
     }
     
     .column-3 {
 	  width:				37%;
 	  .company-col;
 
+      @media only screen and (max-width: @screen-md-min) {
+        width:100%; 
+      }	   
+
 	  .security {
 	  	background-color:	@brand-red;
+	  	height:				32%;
 	  	
 	  	h2 {
 		  border-bottom: 	20px solid @brand-white;
@@ -466,20 +501,46 @@ body {
 	  	}	  	        
       }
 	  
-	  .lock {
-	  	background-color:	@brand-black;
-	  	min-height: 		41.5%;
-	  	padding-left: 		128px!important;
-	  	
-	  	h2 {
-		  border-bottom: 	20px solid @brand-red;
-		  width: 			10.6em;	  	
-	  	}
-	  } 
+	  .lock-wrap {
+	    height:				45%;
+	    overflow:			hidden;
+
+		  img {
+		    width:				93px;
+		    float:				left;
+		    
+	
+		    @media only screen and (max-width: 1320px) {
+		       display:none; 
+		    }	    
+		  }
+
+	  
+		  .lock {
+		  	background-color:	@brand-black;
+		  	height:				100%;
+		  	padding-left: 		128px;
+		  	
+			@media only screen and (max-width: 1320px) {
+			  padding-left:		35px;			  
+			}	
+				  	
+		  	h2 {
+			  border-bottom: 	20px solid @brand-red;
+			  width: 			10.6em;  	
+		  	}
+	
+		    @media only screen and (max-width: @screen-md-min) {
+		       padding: 5px 35px 35px; 
+		    }	  	
+		  	
+		  } 
+
+	  }
 	  
 	  .concrete {
-	  	background-color:	@brand-grey;
-	  	min-height: 		46%;
+	  	background-color:	@brand-grey-medium;
+	  	height: 			23%;
 	  	
 	  	h2 {
 		  border-bottom: 	20px solid @brand-white;
@@ -487,9 +548,11 @@ body {
 	  	}
 	  }
 	  
-	  img {
-	    min-height: 41.5%;
-	  }               
+ 
+	  
+	  @media only screen and (max-width: @screen-xs-min) {
+	     width:100%; 
+	  }	                
  	}
   }
   
