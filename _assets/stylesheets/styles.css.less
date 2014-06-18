@@ -406,28 +406,21 @@ body {
   /* CONTACT */
   
   [data-cycle-hash="contact"] {
-    background-color:		#ffffff;
+    background: url(../images/contact-bg.jpg) no-repeat left top 85px fixed;
+    .background-size(cover);
   }
-  
+    
   .contact {
+    height:	calc(~"100% - "(@nav-ht + 100px));
     
     >div {
-      // width:				575px;
-      //height:				calc(~"100% - "(@nav-ht));
-      height:				100%;
-      margin: 				60px;
-      background-color:		@brand-white;
-	  
-	  >div {
-	    height:				calc(~"100% - "(@nav-ht + 60px));
-	    width:				575px;
-	    margin:				0 auto;
-	    .vertical-align;
-	  }
+      max-width:			575px;
+      margin: 				0 auto;
+      .vertical-align;
 	  
 	  section {
 	    background-color:	#ffffff;	    
-	    // width:				82.6%;
+	    width:				575px;
 		padding:			25px;
 			  
 	    h2 {
