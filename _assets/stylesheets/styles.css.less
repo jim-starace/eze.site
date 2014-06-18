@@ -200,7 +200,7 @@ body {
     float:		right;
 
 	section {
-	  background-color:	rgba(228, 234, 238, 0.5);
+	  background-color:	rgba(228, 234, 238, 0.9);
   	  padding:			14px 18px 18px;
 	
 	  h2 {
@@ -336,7 +336,7 @@ body {
       .vertical-align;
 	  
 	  section {
-	    background-color:	rgba(228, 234, 238, 0.7);
+	    background-color:	rgba(228, 234, 238, 0.9);
 		height:				200px;	    
 	    max-width:			400px;
 		padding:			5px 25px;
@@ -365,193 +365,41 @@ body {
   
   /* COMPANY */
 
-
   [data-cycle-hash="the-company"] {
-    background-color: @brand-grey;
-  }  
+    background-color:		@brand-grey;
+  }
   
   .company {
-    // height:				calc("100% - "(@nav-ht + 65px));
-	margin:				70px 55px;
-	padding:			0px;
-	
-	.img-responsive {
-      width:			100%;
-    } 
-	
-    section {
-	  padding:			5px 35px 35px;
-	  
-	  h2 {
-		margin:			0;
-		font-size:		1.42em;
-		line-height:	1.8em;
-		padding-top:	.77em;
-		color:			@brand-white;	
-	  }
-	  
-	  p {
-		margin:			0;
-		font-size:		.92em;
-		line-height:	1.2em;
-		padding-top:	.77em;
-		color:			@brand-white;
-	  }	  
-	}
-	
-	figure.fluid-width {
-      width:			100%;
+    height:	100%; //calc(~"100% - "(@nav-ht + 100px));
     
-      img {
-        min-width: 		100%;
-      }
-    }
-
+    >div {
+      width:				575px;
+      margin: 				0 auto;
+      background-color:		@brand-grey-medium;
+      .vertical-align;
+	  
+	  section {
+	    background-color:	@brand-black;	    
+	    width:				82.6%;
+		padding:			25px;
+	  
+	    h2 {
+	      color:			@brand-white;
+	      font-size:		1.82em;
+		  line-height:		1.4em;
+		  width:			2.3em;
+		  margin-top:		0px;
+		  border-bottom:	15px solid @brand-red;
+	    }
 	    
-    .column-1 {
-	  width:			37%;
-	  .company-col;
-	  
-	  .msm {
-	  	background-color:	@brand-black;
-	  	height: 		40%;
-	  	
-	  	h2 {
-		  border-bottom: 	20px solid @brand-red;
-		  width: 			2.51em;	  	
-	  	}
-	  }
-	  
-	  figure {
-	  	height: 		20%;	    
-	  }
-	  
-	  .chutes {
-	  	background-color: 	@brand-white;
-	  	height: 		40%;
-	  		
-	  	h2 {
-	  	  color:			@brand-black;
-		  border-bottom: 	20px solid @brand-red;
-		  width: 			7.5em;	  	
-	  	}
-	  	
-	  	p {
-	  	  color: 			@brand-grey-dark;
-	  	}
-	  }
-	  
-	  @media only screen and (max-width: @screen-md-min) {
-	     width:50%; 
-	  }
-	  
-	  @media only screen and (max-width: @screen-xs-min) {
-	     width:100%; 
-	  }	  
-	  	        
+	    p {
+	      color:			@brand-white;
+	      font-size:		.92em;
+	    }		    
+	  }  
     }
-    
-    .column-2 {
-	  width:		26%;
-	  .company-col;
-	  
-	  .stuff {
-	  	background-color:	@brand-grey-dark;
-	  	height: 		60%;
-	  	
-	  	h2 {
-		  border-bottom: 	20px solid @brand-white;
-		  width: 			12.8em;
-		  			  
-		  @media only screen and (max-width: 1320px) {
-		    font-size:		1.2em;			  
-		  }		   	
-	  	}
-	  }
-	  
-	  figure {
-	    height: 40%;
-	  }
-	  
-	  @media only screen and (max-width: @screen-md-min) {
-	     width:50%; 
-	  }
-	  
-	  @media only screen and (max-width: @screen-xs-min) {
-	     width:100%; 
-	  }		  
-	  
-    }
-    
-    .column-3 {
-	  width:				37%;
-	  .company-col;
+  }  								/* End COMPANY */
 
-      @media only screen and (max-width: @screen-md-min) {
-        width:100%; 
-      }	   
-
-	  .security {
-	  	background-color:	@brand-red;
-	  	height:				32%;
-	  	
-	  	h2 {
-		  border-bottom: 	20px solid @brand-white;
-		  width: 			5em;	  	
-	  	}	  	        
-      }
-	  
-
-		  img {
-		    max-height:			253px;
-		    width:				93px;
-		    float:				left;
-		    
-	
-		    @media only screen and (max-width: 1320px) {
-		       display:none; 
-		    }	    
-		  }
-
-	  
-		  .lock {
-		  	background-color:	@brand-black;
-		  	height:				253px;
-		  	padding-left: 		128px;
-		  	
-			@media only screen and (max-width: 1320px) {
-			  padding-left:		35px;			  
-			}	
-				  	
-		  	h2 {
-			  border-bottom: 	20px solid @brand-red;
-			  width: 			10.6em;  	
-		  	}
-	
-		    @media only screen and (max-width: @screen-md-min) {
-		       padding: 5px 35px 35px; 
-		    }	  	
-		  	
-		  } 
-
-	  
-	  .concrete {
-	  	background-color:	@brand-grey-medium;
-	  	height: 			23%;
-	  	
-	  	h2 {
-		  border-bottom: 	20px solid @brand-white;
-		  width: 			13.5em;	  	
-	  	}
-	  }
-	  
- 
-	  
-	  @media only screen and (max-width: @screen-xs-min) {
-	     width:100%; 
-	  }	                
- 	}
-  }
   
   /* CONTACT */
   

@@ -49,7 +49,7 @@
 .ezextends h2 {
 	font-family: 'Raleway Extra Bold','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.going h2 {
+.going h2, .company h2 {
 	font-family: 'Raleway Semi Bold','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .company p, .going p {
