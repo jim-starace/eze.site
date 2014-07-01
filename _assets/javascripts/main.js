@@ -27,7 +27,7 @@
 	function setActivePage () {
 		var page = window.location.hash.substr(1);
 	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
-	  	if (page != 'ezextends' && page != '' ) {
+	  	if (page != 'ezextenz' && page != '' ) {
 	  		$('.prev-button').removeClass('hidden');
 	  		$('.gallery').show();
 	  	} else {
