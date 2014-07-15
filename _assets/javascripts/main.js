@@ -15,6 +15,7 @@
         // The DOM is ready!
 		setActivePage();
 		$('a[data-target="flare"]').peFlareLightbox();
+              
         
     });
 
@@ -29,10 +30,10 @@
 	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
 	  	if (page != 'ezextenz' && page != '' ) {
 	  		$('.prev-button').removeClass('hidden');
-	  		$('.gallery').show();
+	  		//$('.gallery').show();
 	  	} else {
 	  		$('.prev-button').addClass('hidden');
-	  		$('.gallery').hide();
+	  		//$('.gallery').hide();
 	  	}
 	  	if (page != 'contact' ) {
 	  		$('.next-button').removeClass('hidden');
@@ -40,10 +41,17 @@
 	  		$('.next-button').addClass('hidden');
 	  	}
 	  	if (page == 'chute-gallery') {
-	  		$('#site-content').css('height' , '100%');
+	  		//$('#site-content').css('height' , '100%');
 	  	} else {
-	  		$('#site-content').css('height' , '');
+	  		//$('#site-content').css('height' , '');
 	  	}
-	}	
+	}
+	
+	$(document).on('click','.navbar-collapse.in',function(e) {
+	    if( $(e.target).is('a') ) {
+	        $(this).collapse('hide');
+	    }
+	});	
+		
 
 }));
