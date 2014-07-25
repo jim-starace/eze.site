@@ -87,6 +87,15 @@
        -o-transform:	translateY(-50%);
           transform:	translateY(-50%);  
 }
+.undo-vertical-align() {
+  position:				relative;
+  top:					auto;
+  -webkit-transform:	none;
+     -moz-transform:	none;
+      -ms-transform:	none;
+       -o-transform:	none;
+          transform:	none;  
+}
 .company-col {
   height: 				100%;
   float:				left;
@@ -108,7 +117,7 @@ body {
   	font-size: 12px;
   }
   @media only screen and (max-width: @screen-sm-min) {
-  	font-size: 10px;
+  	font-size: 11px;
   }
 }
 
@@ -199,7 +208,7 @@ body {
     
   .ezextenz {
     max-width:	570px;
-    float:		right;
+    float:		right;    
 
 	section {
 	  background-color:	rgba(228, 234, 238, 0.9);
@@ -237,6 +246,7 @@ body {
 	
 	@media (max-width: 768px) {
 	  margin-top:	15px;
+	  margin-right: 15px;
 	}
   }  								/* End EZEXTENZ */
   
@@ -251,95 +261,45 @@ body {
   /* GALLERY */
 
   [data-cycle-hash="chute-gallery"] {
-    background: url(../images/gallery-bg.jpg) no-repeat left top 85px fixed;
-    .background-size(cover);
+    background: url(../images/gallery-bg.jpg) @brand-grey no-repeat left top 85px fixed;
+    .background-size(contain);
   }
 
-
-  .gallery {
- 
-      
-     >div>div {
-      float:left; 
-      
-      .img-responsive {
-        width:	100%;
-      }       
-     }   
-    
-    .row-1>div {
-      height: 21.80%;
-        
-      &.col-1 {
-        width: 40.39%;
-      }
-      &.col-2 {
-        width: 41.56%;
-      }
-      &.col-3 {
-        width: 18.05%;
-      }  
-    }
-    
-    .row-2>div {
-      height: 30.42%;
-      
-      &.col-1 {
-        width: 25.39%;
-      }
-      &.col-2 {
-        width: 25.39%;
-      }
-      &.col-3 {
-        width: 26.33%;
-      } 
-      &.col-4 {
-        width: 22.89%;
-      }       
-    }
-    
-    .row-3>div {
-      height: 47.78%;
-      
-      &.col-1 {
-        width: 18.52%;
-      }
-      &.col-2 {
-        width: 20%;
-      }
-      &.col-3 {
-        width: 20.39%;
-      }
-      &.col-4 {
-        width: 21.02%;
-      } 
-      &.col-5 {
-        width: 20.07%;
-      }              
-    }
-    
-  }
   
   /* LETS GET GOING */
 
   [data-cycle-hash="lets-get-going"] {
-    background: url(../images/get-going-bg.jpg) no-repeat center 85px fixed;
+    background: url(../images/get-going-bg.old.jpg) no-repeat center 85px fixed;
     .background-size(cover);
   }
     
   .going {
-    height:	calc(~"100% - "(@nav-ht + 100px));
+    height:					100%;
     
     >div {
       max-width:			845px;
+      height: 				250px;
       margin: 				0 auto;
       .vertical-align;
+      
+      @media only screen and (max-width: 799px) {
+	  	max-width: 			400px;
+	  	height: 			auto;
+	  	margin: 			25px auto;
+	  	.undo-vertical-align;
+      }      
+      
+      
 	  
 	  section {
 	    background-color:	rgba(228, 234, 238, 0.9);
 		height:				250px;	    
 	    max-width:			400px;
 		padding:			5px 25px;
+		
+		@media only screen and (max-width: 799px) {
+			margin: 		10px;
+	    }
 	  
 	    h2 {
 	      font-size:		1.42em;
@@ -354,10 +314,18 @@ body {
 	  	
 	  	&.install {
 	      float:			left;
+	      
+	      @media only screen and (max-width: 799px) {
+		      float: 		none;
+	      }
 	    }
 	  	
 	  	&.training {
 	      float:			right;
+	      
+	      @media only screen and (max-width: 799px) {
+		      float: 		none;
+	      }
 	    }		    
 	  }  
     }
@@ -366,17 +334,22 @@ body {
   /* COMPANY */
 
   [data-cycle-hash="the-company"] {
-    background-color:		@brand-grey;
+    background-color: @brand-grey;
   }
   
   .company {
-    height: 			100%;
+    height:			100%;
 	  
     section {
-      .vertical-align();
+      .vertical-align;
+      
+      @media only screen and (max-width: 768px) {
+	  	.undo-vertical-align;
+	  	margin-top: 35px;
+	  }
 	
 	  img {
-	    margin:			0 auto;
+	    margin:		0 auto;
 	  }		    
     }  
   }  								/* End COMPANY */
@@ -384,29 +357,34 @@ body {
   
   /* CONTACT */
   
-/*  [data-cycle-hash="contact"] {
-    background: url(../images/contact-bg.jpg) no-repeat left top 85px fixed;
-    .background-size(cover);
-  }
-*/
-
-	[data-cycle-hash="contact"] {
-		background-color: @brand-grey;
-		border:50px white solid;
+  [data-cycle-hash="contact"] {
+	background-color:		@brand-grey;
+	border: 				50px white solid;
+	
+	@media only screen and (max-width: 768px) {
+		border: 			none;
 	}
+  }
+  
   .contact {
-    height:	100%;
+    height:					100%;
     background-color:       @brand-grey;
     
     >div {
       max-width:			575px;
       margin: 				0 auto;
       .vertical-align;
+
+	  @media only screen and (max-width: 768px) {
+		margin-top: 		35px;	
+		.undo-vertical-align;
+	  }
 	  
 	  section {
 	    background-color:	#ffffff;	    
-	    width:				575px;
+	    max-width:			575px;
 		padding:			25px;
+		margin-bottom: 		10px;
 			  
 	    h2 {
 	      color:			@brand-black;
