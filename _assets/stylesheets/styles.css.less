@@ -28,6 +28,20 @@
 
 
 // Mixins
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+@highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
+
+.at2x(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~`@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
+
+  @media @highdpi {
+    background-image: url("@{at2x_path}");
+    background-size: @w @h;
+  }
+}
 
 .box-shadow() {
   -webkit-box-shadow:	none;
@@ -198,6 +212,13 @@ body {
 	[data-cycle-hash="ezextenz"] {
 	    background: url(../images/ezextenz-bg.jpg) @brand-grey no-repeat left top 85px fixed;
 	    .background-size(cover);
+	    
+      @media only screen and (max-width: @screen-md-min) {
+          background-position: center center;
+      }	
+		  @media @highdpi {
+		    background-image: url(../images/ezextenz-bg@2x.jpg);
+		  }          
 	}
 	.ezextenz {
 	    max-width:		570px;
@@ -255,14 +276,25 @@ body {
   [data-cycle-hash="chute-gallery"] {
     background: url(../images/gallery-bg.jpg) @brand-grey no-repeat left top 85px fixed;
     .background-size(contain);
+    
+	  @media @highdpi {
+	    background-image: url(../images/gallery-bg@2x.jpg);
+	  }       
   }
 
   
   /* LETS GET GOING */
 
   [data-cycle-hash="lets-get-going"] {
-    background: url(../images/get-going-bg.old.jpg) @brand-grey no-repeat center 85px fixed;
+    background: url(../images/get-going-bg.jpg) @brand-grey no-repeat center 85px fixed;
     .background-size(cover);
+    
+    @media only screen and (max-width: 799px) {
+        background-position: center center;
+    }	
+	  @media @highdpi {
+	    background-image: url(../images/get-going-bg@2x.jpg);
+	  }     
   }
     
 	.going {
@@ -333,13 +365,29 @@ body {
       .vertical-align;
       
       @media only screen and (max-width: @screen-md-min) {
-	  	.undo-vertical-align;
-	  	margin-top: 35px;
-	  }
+	  		.undo-vertical-align;
+				margin-top: 25px;
+			}
 	
-	  img {
-	    margin:			0 auto;
-	  }		    
+			img {
+	    	margin:			0 auto;
+	    	
+	    	&.lg {
+		    	display: inherit;
+		    	
+		    	@media only screen and (max-width: @screen-md-min) {
+		    		display: none;
+		    	}
+	    	}
+	    	
+	    	&.sm {
+		    	display: none;
+		    	
+		    	@media only screen and (max-width: @screen-md-min) {
+		    		display: inherit;
+		    	}
+	    	}	    	
+			}		    
     }  
   }  								/* End COMPANY */
 
@@ -350,7 +398,7 @@ body {
 		background-color:			@brand-grey;
 		border: 							50px white solid;
 	
-		@media only screen and (max-width: 768px) {
+		@media only screen and (max-width: @screen-md-min) {
 			border: 						none;
 		}
   }
@@ -362,24 +410,23 @@ body {
     >div {
       max-width:					575px;
       margin:							0 auto;
-    background-color:			@brand-grey;      
+			background-color:			@brand-grey;      
       .vertical-align;
 
-			@media only screen and (max-width:@screen-xs-min) {
-				margin-top:				15px;
-				max-width:				220px;	
+			@media only screen and (max-width:@screen-md-min) {
+				margin-top:				25px;
 				.undo-vertical-align;
 			}
+			
+			@media only screen and (max-width:@screen-xs-min) {
+				width: 						220px;
+			}			
 	  
 		  section {
 		    background-color:	#ffffff;	    
-		    max-width:				575px;
+		    max-width:				100%;
 				padding:					25px;
-				margin-bottom:		10px;
-				
-				@media only screen and (max-width:@screen-xs-min) {
-	    		max-width:			220px;
-				}				
+				margin-bottom:		10px;			
 				  
 		    h2 {
 		      color:					@brand-black;

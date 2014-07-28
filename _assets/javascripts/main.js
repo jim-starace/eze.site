@@ -30,20 +30,13 @@
 	  	$("#" + page +"_").addClass('active').siblings().removeClass('active');
 	  	if (page != 'ezextenz' && page != '' ) {
 	  		$('.prev-button').removeClass('hidden');
-	  		//$('.gallery').show();
 	  	} else {
 	  		$('.prev-button').addClass('hidden');
-	  		//$('.gallery').hide();
 	  	}
 	  	if (page != 'contact' ) {
 	  		$('.next-button').removeClass('hidden');
 	  	} else {
 	  		$('.next-button').addClass('hidden');
-	  	}
-	  	if (page == 'chute-gallery') {
-	  		//$('#site-content').css('height' , '100%');
-	  	} else {
-	  		//$('#site-content').css('height' , '');
 	  	}
 	}
 	

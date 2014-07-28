@@ -1,14 +1,13 @@
-<a href="./images/gallery/0.jpg"
-   data-description="Ezextenz Concrete Chute"
-   data-target="flare"
-   data-flare-scale="fit"
-   data-flare-gallery="eze-gallery"
->
-	
+<a href="./images/gallery/video-thumb.jpg" 
+	 data-flare-video="http://youtu.be/m-p2VV8qV2w" 
+	 data-target="flare" 
+	 data-flare-gallery="eze-gallery" 
+	 data-flare-thumb="./images/gallery/video-thumb.jpg"
+>	
 	<div class="gallery fluid-height"></div>
 </a>
 <div class="hiddenLightboxContent">
-	{% assign myArray = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24" | split: "|" %}
+	{% assign myArray = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|0" | split: "|" %}
 	{% for item in myArray %} 
 	<a href="./images/gallery/{{ item }}.jpg"
 	   data-description="Ezextenz Concrete Chute"
