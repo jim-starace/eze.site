@@ -255,6 +255,10 @@ body {
     padding-right:	0;
   }
   
+  span.red {
+    color: @brand-red;
+  }
+  
   /* EZEXTENZ */
   
 	[data-cycle-hash="ezextenz"] {
@@ -350,11 +354,11 @@ body {
 	    
 	    >div {
 	        .vertical-align;
-	        height: 								250px;
+	        height: 								570px;
 	        margin: 								0 auto;
-	        max-width: 							845px;
+	        max-width: 							900px;
 	        
-	        @media only screen and (max-width:799px) {
+	        @media only screen and (max-width:899px) {
 	            .undo-vertical-align;
 	            height:					 		auto;
 	            margin: 						25px auto;
@@ -363,10 +367,10 @@ body {
 	        
 	        section {
 	            background-color: 	rgba(228,234,238,0.9);
-	            height: 						250px;
-	            max-width: 					400px;
+	            height: 						230px;
+	            max-width: 					440px;
 	            padding: 						5px 25px;
-	            @media only screen and (max-width:799px) {
+	            @media only screen and (max-width:899px) {
 	                height: 				auto;
 	                margin: 				10px;
 	                padding-bottom: 10px;
@@ -383,17 +387,27 @@ body {
 	                font-size: 			1.00em;
 	            }
 	            
+	            &.hardwork {
+		            	max-width: 			900px;
+		            	height: 				300px;
+		            	margin-bottom: 	20px;
+		            	
+	                @media only screen and (max-width:899px) {
+	                    height: 		auto;
+	                }		            	
+	            }
+	            
 	            &.install {
 	                float: left;
-	                @media only screen and (max-width:799px) {
-	                    float: 			none;
+	                @media only screen and (max-width:899px) {
+	                    display: 		none;
 	                }
 	            }
 	            
-	            &.training {
+	            &.maintenance {
 	                float: right;
-	                @media only screen and (max-width:799px) {
-	                    float: 			none;
+	                @media only screen and (max-width:899px) {
+	                    display: 		none;
 	                }
 	            }
 	        }

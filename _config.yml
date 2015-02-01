@@ -13,3 +13,9 @@ assets:
   js_compressor:  uglifier
   css_compressor: sass
   baseurl: assets/
+  
+#Glynn
+ftp_host: 'ftp.ezextenz.com'
+ftp_dir: '/'
+ftp_passive: false
+ftp_username: 'ezextenz.com'
